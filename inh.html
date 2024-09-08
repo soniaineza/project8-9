@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <h1>MY LOCAL</h1>
+    <p id="p1"></p>
+    <script>
+        class Priyanka {
+            constructor(name) {
+                this.name = name;
+            }
+            present() {
+                return "My name is " + this.name;
+            }
+        }
+
+        class Child extends Priyanka {
+            constructor(name, childName) {
+                super(name); 
+                this.childName = childName;
+            }
+            show() {
+                return this.present() + ", I have a girl called " + this.childName;
+            }
+        }
+
+        let child1 = new Child("Priyanka", "Sonia");
+        document.getElementById("p1").innerHTML = child1.show();
+    </script>
+</body>
+
+</html>
